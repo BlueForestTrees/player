@@ -50,6 +50,9 @@ if (conf.mode === "production") {
         libraryTarget: 'var',
         library: 'Player'
     };
+    conf.externals = {
+        vue : "Vue"
+    }
 }
 
 module.exports = conf;
