@@ -31,7 +31,6 @@ const conf = {
         new VueLoaderPlugin()
     ],
 
-
 };
 
 if (conf.mode === "development") {
@@ -45,8 +44,11 @@ if (conf.mode === "development") {
 if (conf.mode === "production") {
     conf.plugins.push(new Visualizer({filename: '../visualizer/statistics.html'}));
     conf.output = {
+        ...conf.output,
         filename: 'play.js',
-        path: path.resolve(__dirname, 'dist/play.draw.blueforest.org')
+        path: path.resolve(__dirname, 'dist/play.draw.blueforest.org'),
+        libraryTarget: 'var',
+        library: 'Player'
     };
 }
 
