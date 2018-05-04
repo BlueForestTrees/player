@@ -1,5 +1,5 @@
 <template>
-    <svg :width="film.tw" :height="film.th" :viewBox="`${film.tx} ${film.ty} ${film.tw} ${film.th}`">
+    <svg v-if="film" :width="film.tw" :height="film.th" :viewBox="`${film.tx} ${film.ty} ${film.tw} ${film.th}`">
         <g>
             <defs>
                 <clipPath v-for="mi in film.f.masks" :id="`mask${mi.e._id}`" :key="`mask${mi.e._id}`">
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-    import {eii, path, showPathD, style} from "../../src/main/util/playerSurface";
+    import {eii, path, showPathD, style} from "../js/playerSurface";
 
     export default {
         name: 'player-surface',
