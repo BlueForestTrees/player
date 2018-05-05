@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/BlueForestTrees/trees-draw-play/issues"
   },
-  "unpkg": "dist/draw.blueforest.org/play/play.min.js",
+  "unpkg": "dist/play.min.js",
   "homepage": "https://github.com/BlueForestTrees/trees-draw-play#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
