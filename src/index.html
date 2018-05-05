@@ -12,6 +12,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
     <script>
         const film = {
             "f": {
@@ -904,6 +905,9 @@
         };
         window.onload = function () {
             Player.init("#app", film, function (player) {
+                player.end(function () {
+                    console.log("end");
+                });
                 player.start();
             });
         }
@@ -911,7 +915,8 @@
 
 </head>
 <body>
-<div id="app"></div>
-<div id="app2"></div>
+<div id="film">
+    <div id="app"></div>
+</div>
 </body>
 </html>

@@ -23,7 +23,7 @@ const conf = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({template: './src/example.html', inject: 'body', hash: 'false'}),
+        new HtmlWebpackPlugin({template: './src/index.html', inject: 'body', hash: 'false'}),
         new webpack.DefinePlugin({
             VERSION: JSON.stringify(require("./package.json").version)
         }),
