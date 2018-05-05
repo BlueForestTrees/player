@@ -24,3 +24,7 @@ export const init = (el, film, ready) => {
         }
     });
 };
+
+
+//utiliser cela pour les applis vue:
+//https://unpkg.com/package@version/file

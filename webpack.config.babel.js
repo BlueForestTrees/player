@@ -1,4 +1,3 @@
-import path from 'path';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 import { VueLoaderPlugin } from 'vue-loader';
 import webpack from 'webpack';
@@ -8,7 +7,7 @@ const NODE_ENV = process.env.NODE_ENV;
 
 const conf = {
     mode: NODE_ENV,
-    entry: './src/index.js',
+    entry: './src/play.js',
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
@@ -24,7 +23,7 @@ const conf = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({template: './src/index.html', inject: 'body', hash: 'false'}),
+        new HtmlWebpackPlugin({template: './src/example.html', inject: 'body', hash: 'false'}),
         new webpack.DefinePlugin({
             VERSION: JSON.stringify(require("./package.json").version)
         }),
@@ -45,8 +44,7 @@ if (conf.mode === "production") {
     conf.plugins.push(new Visualizer({filename: '../visualizer/statistics.html'}));
     conf.output = {
         ...conf.output,
-        filename: 'play.js',
-        path: path.resolve(__dirname, 'dist/draw.blueforest.org/play'),
+        filename: 'play.min.js',
         libraryTarget: 'var',
         library: 'Player'
     };
