@@ -1,20 +1,25 @@
 import Vue from 'vue';
-import PlayerSurface from './vue/PlayerSurface';
+import Play from './vue/Play';
 import {navTo, play} from "./js/playerControl";
 
+//pour usage dans une appli vue
+export const nav = navTo;
+export const start = play;
+
+//usage dans une page html avec balise script
 export const init = (el, film, ready) => {
     new Vue({
         el,
-        components: {PlayerSurface},
+        components: {Play},
         data: function () {
             return {film: null};
         },
-        template: '<PlayerSurface :film="film"/>',
+        template: '<Play :film="film"/>',
         mounted: function () {
             this.film = film;
             ready({
-                play: () => play(this.film),
-                navTo: i => navTo(this.film, i)
+                start: () => play(this.film),
+                nav: i => navTo(this.film, i)
             });
         }
     });

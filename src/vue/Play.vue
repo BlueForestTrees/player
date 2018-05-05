@@ -19,7 +19,7 @@
     import {eii, path, showPathD, style} from "../js/playerSurface";
 
     export default {
-        name: 'player-surface',
+        name: 't-play',
         props: ['film'],
         methods: {
             eii, showPathD, path, style,
