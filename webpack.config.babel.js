@@ -46,7 +46,7 @@ if (conf.mode === "production") {
     conf.output = {
         ...conf.output,
         filename: 'play.js',
-        path: path.resolve(__dirname, 'dist/play.draw.blueforest.org'),
+        path: path.resolve(__dirname, 'dist/draw.blueforest.org/play'),
         libraryTarget: 'var',
         library: 'Player'
     };
