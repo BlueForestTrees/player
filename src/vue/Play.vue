@@ -1,5 +1,5 @@
 <template>
-    <svg v-if="film" width="100%" height="100%" :viewBox="`${film.tx} ${film.ty} ${film.tw} ${film.th}`">
+    <svg v-if="film" width="100%" height="100%" :viewBox="`${film.camera.x} ${film.camera.y} ${film.camera.w} ${film.camera.h}`">
         <g>
             <defs>
                 <clipPath v-for="mi in film.f.masks" :id="`mask${mi.e._id}`" :key="`mask${mi.e._id}`">
