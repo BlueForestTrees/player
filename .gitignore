@@ -4,6 +4,7 @@
 node_modules/
 target/
 dist/
+visualiser/
 
 # User-specific stuff:
 .idea/**/workspace.xml
