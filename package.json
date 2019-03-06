@@ -1,6 +1,6 @@
 {
   "name": "draw-player",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "player for trees-draws",
   "main": "index.js",
   "author": "slim",
